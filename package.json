@@ -1,0 +1,25 @@
+{
+  "name": "fb-active-dashboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "puppeteer": "^3.0.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/animesh-chouhan/fb-active-dashboard.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/animesh-chouhan/fb-active-dashboard/issues"
+  },
+  "homepage": "https://github.com/animesh-chouhan/fb-active-dashboard#readme"
+}
