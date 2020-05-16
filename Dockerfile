@@ -31,7 +31,7 @@ RUN groupadd -r pptruser && useradd -r -g pptruser -G audio,video pptruser \
 # Uncomment to skip the chromium download when installing puppeteer. If you do,
 # you'll need to launch puppeteer with:
 #     browser.launch({executablePath: 'google-chrome-stable'})
-ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
+# ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
 
 # Bundle app source
 COPY . .

@@ -15,7 +15,7 @@
 // app.listen(PORT, HOST);
 // console.log(`Running on http://${HOST}:${PORT}`);
 
-const puppeteer = require("puppeteer");
+const puppeteer = require("puppeteer-core");
 
 (async () => {
     const browser = await puppeteer.launch({ executablePath: "google-chrome-stable" });
