@@ -18,7 +18,7 @@
 const puppeteer = require("puppeteer");
 
 (async () => {
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({ executablePath: "google-chrome-stable" });
     const page = await browser.newPage();
     await page.goto("https://example.com");
 
