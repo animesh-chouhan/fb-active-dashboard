@@ -18,10 +18,9 @@ RUN apt-get update \
     --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
-# Uncomment to skip the chromium download when installing puppeteer. If you do,
-# you'll need to launch puppeteer with:
-#     browser.launch({executablePath: 'google-chrome-stable'})
-ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
+# If you are building your code for production
+# RUN npm ci --only=production
+RUN npm install
 
 # Add user so we don't need --no-sandbox.
 RUN groupadd -r pptruser && useradd -r -g pptruser -G audio,video pptruser \
@@ -29,9 +28,10 @@ RUN groupadd -r pptruser && useradd -r -g pptruser -G audio,video pptruser \
     && chown -R pptruser:pptruser /home/pptruser \
     && chown -R pptruser:pptruser ./node_modules
 
-# If you are building your code for production
-# RUN npm ci --only=production
-RUN npm install
+# Uncomment to skip the chromium download when installing puppeteer. If you do,
+# you'll need to launch puppeteer with:
+#     browser.launch({executablePath: 'google-chrome-stable'})
+ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
 
 # Bundle app source
 COPY . .
