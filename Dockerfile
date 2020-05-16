@@ -38,4 +38,4 @@ COPY . .
 
 EXPOSE 8080
 USER pptruser
-CMD [ "node", "server.js" ]
+CMD [ "node", "app.js" ]
